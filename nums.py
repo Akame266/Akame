@@ -1,3 +1,5 @@
+from string import ascii_uppercase
+print(ascii_uppercase)
 def numrev(x,y=2):
     a=[]
     b = ''
@@ -11,7 +13,9 @@ def numrev(x,y=2):
         b += str(o)
     return print(a,b)
 
-numrev(1000,16)
 
-print(bin(35))
 print(hex(1000))
+print(hex(966))
+print(hex(999))
+print(hex(1))
+print(hex(28))

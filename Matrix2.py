@@ -29,25 +29,23 @@ def bubble(array):
             kap = 0
         if kap:
             break
+    for i1 in range(len(a)):
+        for i in range(len(a)):
+            flag = 1
+            for j in range(len(a) - 1):
+                if (i1 + 10) % 2:
+                    if a[j][i1] > a[j + 1][i1]:
+                        a[j][i1], a[j + 1][i1] = a[j + 1][i1], a[j][i1]
+                    flag = 0
+                else:
+                    if a[j][i1] < a[j + 1][i1]:
+                        a[j][i1], a[j + 1][i1] = a[j + 1][i1], a[j][i1]
+                    flag = 0
+        if flag:
+            break
 
 
 bubble(a1)
-
-for i1 in range(len(a)):
-    for i in range(len(a)):
-        flag = 1
-        for j in range(len(a) - 1):
-            if (i1 + 10) % 2:
-                if a[j][i1] > a[j + 1][i1]:
-                    a[j][i1], a[j + 1][i1] = a[j + 1][i1], a[j][i1]
-                flag = 0
-            else:
-                if a[j][i1] < a[j + 1][i1]:
-                    a[j][i1], a[j + 1][i1] = a[j + 1][i1], a[j][i1]
-                flag = 0
-    if flag:
-        break
-
 
 print()
 print()
@@ -59,7 +57,3 @@ print()
 for h in a1:
     print(o.format(y=h), end='')
 print()
-
-
-print()
-print('Помилуйте',chr(0x1F480))
